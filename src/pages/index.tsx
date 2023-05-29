@@ -1,17 +1,19 @@
 import type { NextPage } from "next";
 import React from "react";
 import { Header } from "../components/Header";
-import { ContainerContact } from "../components/ContainerContact";
 import { ContainerForm } from "../components/ContainerForm";
 import { ContainerDecoration } from "../components/ContainerDecoration";
+import { Footer } from "../components/Footer";
 
 const IndexPage: NextPage = () => {
   return (
     <React.Fragment>
       <Header />
-      <ContainerContact />
-      <ContainerForm />
-      <ContainerDecoration />
+      <main className="flex flex-col gap-5 px-[8%] py-5">
+        <ContainerDecoration />
+        <ContainerForm />
+      </main>
+      <Footer />
     </React.Fragment>
   );
 };

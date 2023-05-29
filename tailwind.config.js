@@ -8,6 +8,9 @@ module.exports = {
     },
 
     extend: {
+      transitionProperty: {
+        height: "height",
+      },
       borderRadius: {
         "radius-1": "0.25rem",
         "radius-2": "0.75rem",
