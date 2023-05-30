@@ -1,11 +1,8 @@
 import Link from "next/link";
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
+import { useAppDispatch } from "../../hooks";
 
-interface iFormLogin {
-  redirect: Dispatch<SetStateAction<string>>;
-}
-
-export const FormLogin = ({ redirect }: iFormLogin) => {
+export const FormLogin = () => {
   return (
     <div className="p-6 border-2 border-gray-2 rounded-radius-3 flex flex-col gap-6">
       <h1 className="text-heading-1 text-gray-2">Seja bem vindo novamente</h1>
@@ -34,9 +31,7 @@ export const FormLogin = ({ redirect }: iFormLogin) => {
         <span className="text-center text-body-2 text-gray-2">
           Esqueceu a senha?
         </span>
-        <button onClick={() => redirect("register")}>
-          Ainda não possui conta? se cadastre aqui
-        </button>
+        <Link href="/register">Ainda não possui conta? se cadastre aqui</Link>
       </form>
     </div>
   );

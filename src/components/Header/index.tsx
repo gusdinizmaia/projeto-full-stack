@@ -21,14 +21,14 @@ export const Header = () => {
       >
         <div className="w-full flex items-center justify-between">
           <Link
-            href={"/"}
+            href="/"
+            replace
             className="p-4 w-full bg-gray-5 text-body font-600 text-gray-1 text-center hover:"
           >
             Login
           </Link>
-
           <Link
-            href={"/"}
+            href="/register"
             className="p-4 w-full bg-gray-1 text-body font-600 text-gray-5 text-center hover:"
           >
             Registro

@@ -1,10 +1,7 @@
-import React, { Dispatch, SetStateAction } from "react";
+import { useAppDispatch } from "../../hooks";
+import Link from "next/link";
 
-interface iFormRegister {
-  redirect: Dispatch<SetStateAction<string>>;
-}
-
-export const FormRegister = ({ redirect }: iFormRegister) => {
+export const FormRegister = () => {
   return (
     <div className="p-6 border-2 border-gray-2 rounded-radius-3 flex flex-col gap-5">
       <h1 className="text-heading-1 text-gray-2">
@@ -46,9 +43,9 @@ export const FormRegister = ({ redirect }: iFormRegister) => {
         <span className="text-center text-body-2 text-gray-2">
           Esqueceu a senha?
         </span>
-        <button onClick={() => redirect("login")}>
+        <Link href="/" replace>
           Você já tem uma conta? entre aqui
-        </button>
+        </Link>
       </form>
     </div>
   );
